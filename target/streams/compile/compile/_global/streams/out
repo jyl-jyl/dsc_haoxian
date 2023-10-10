@@ -1,0 +1,5 @@
+[0m[[0m[31merror[0m] [0m[0m/Users/ljy/Desktop/PENN/2023_summer/boon_dsc/dsc_haoxian/src/main/scala/Main.scala:118:31: not enough arguments for method getOrElse: (key: String, default: => V1): V1.[0m
+[0m[[0m[31merror[0m] [0m[0mUnspecified value parameter default.[0m
+[0m[[0m[31merror[0m] [0m[0m      outDir=options.getOrElse("output").toString,[0m
+[0m[[0m[31merror[0m] [0m[0m                              ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m
