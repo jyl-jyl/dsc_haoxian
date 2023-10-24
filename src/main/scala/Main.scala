@@ -50,6 +50,8 @@ object Main extends App {
           consolidateUpdates: Boolean, materializePath: String = s"", enableProjection:Boolean,
           arithmeticOptimization: Boolean = true): Unit = {
     createDirectory(outDir)
+    println("outdir", outDir)
+    // exit(1)
     val filename = Misc.getFileNameFromPath(filepath)
     val dl = parseProgram(filepath)
     val materializedRelations: Set[Relation] = if (materializePath.nonEmpty) {
@@ -114,8 +116,8 @@ object Main extends App {
     // val _outDir = if(isInstrument) outDirWithInstrumentations else outDir
     val filepath = options("filepath").toString
     run(filepath, displayResult = true, 
-      // outDir=options("out").toString,
-      outDir=options.getOrElse("out", "output").toString,
+      outDir=options("out").toString,
+      // outDir=options.getOrElse("out", "output").toString,
       isInstrument = options.getOrElse("instrument",false).toString.toBoolean,
       monitorViolations = options.getOrElse("monitor",false).toString.toBoolean,
       consolidateUpdates = options.getOrElse("fuse",false).toString.toBoolean,
